@@ -6,7 +6,7 @@ module.exports = {
   // DaisyUI theme colors
   daisyui: {
     themes: [
-      {
+      /*  {
         light: {
           primary: "#93BBFB",
           "primary-content": "#212638",
@@ -37,28 +37,45 @@ module.exports = {
             opacity: "80%",
           },
         },
-      },
+      }, */
       {
         dark: {
-          primary: "#212638",
+          primary: "#38FF26",
           "primary-content": "#F9FBFF",
-          secondary: "#323f61",
+          secondary: "#D4FFAE",
           "secondary-content": "#F9FBFF",
-          accent: "#4969A6",
+          accent: "#00FF5E",
           "accent-content": "#F9FBFF",
           neutral: "#F9FBFF",
-          "neutral-content": "#385183",
-          "base-100": "#385183",
-          "base-200": "#2A3655",
-          "base-300": "#212638",
+          "neutral-content": "#202020",
+          "base-100": "#2E2E2E",
+          "base-200": "#2A2A2A",
+          "base-300": "#1E1E1E",
           "base-content": "#F9FBFF",
-          info: "#385183",
-          success: "#34EEB6",
-          warning: "#FFCF72",
-          error: "#FF8863",
+          info: "#85FFF8",
+          success: "#38FF26",
+          warning: "#F2FF01",
+          error: "#FF006B",
 
           "--rounded-btn": "9999rem",
-
+          ".btn-primary": {
+            color: "black",
+          },
+          ".btn-warning": {
+            color: "black",
+          },
+          ".btn-error": {
+            color: "black",
+          },
+          ".btn-success": {
+            color: "black",
+          },
+          ".btn-secondary": {
+            color: "black",
+          },
+          ".btn-info": {
+            color: "black",
+          },
           ".tooltip": {
             "--tooltip-tail": "6px",
             "--tooltip-color": "oklch(var(--p))",
