@@ -1861,6 +1861,8 @@ __metadata:
     "@ethersproject/providers": ^5.7.2
     "@heroicons/react": ^2.0.11
     "@rainbow-me/rainbowkit": 1.3.5
+    "@supabase/ssr": ^0.1.0
+    "@supabase/supabase-js": ^2.41.1
     "@trivago/prettier-plugin-sort-imports": ^4.1.1
     "@types/node": ^17.0.35
     "@types/nprogress": ^0
@@ -2204,6 +2206,89 @@ __metadata:
     "@stablelib/random": ^1.0.2
     "@stablelib/wipe": ^1.0.1
   checksum: f8537066b542b6770c1b5b2ae5ad0688d1b986e4bf818067c152c123a5471531987bbf024224f75f387f481ccc5b628e391e49e92102b8b1a3e2d449d6105402
+  languageName: node
+  linkType: hard
+
+"@supabase/auth-js@npm:2.63.0":
+  version: 2.63.0
+  resolution: "@supabase/auth-js@npm:2.63.0"
+  dependencies:
+    "@supabase/node-fetch": ^2.6.14
+  checksum: be8f65053d55f772e7e52132d98b2f3d3b982a4d85882a81d1858622db9089e2ff2d4555a2721df0d795e72eee79db5f456aacc7d3924d79bcf2ef4a02900465
+  languageName: node
+  linkType: hard
+
+"@supabase/functions-js@npm:2.2.2":
+  version: 2.2.2
+  resolution: "@supabase/functions-js@npm:2.2.2"
+  dependencies:
+    "@supabase/node-fetch": ^2.6.14
+  checksum: 9658bcc5de2552171ab8e41949e56a8cebbe38f203d0ed9b85facaa1ace7623bce7eeab11e21159360f17259c81628f40b34db3cfa0f73f76f2d8e1076174d7a
+  languageName: node
+  linkType: hard
+
+"@supabase/node-fetch@npm:2.6.15, @supabase/node-fetch@npm:^2.6.14":
+  version: 2.6.15
+  resolution: "@supabase/node-fetch@npm:2.6.15"
+  dependencies:
+    whatwg-url: ^5.0.0
+  checksum: 9673b49236a56df49eb7ea5cb789cf4e8b1393069b84b4964ac052995e318a34872f428726d128f232139e17c3375a531e45e99edd3e96a25cce60d914b53879
+  languageName: node
+  linkType: hard
+
+"@supabase/postgrest-js@npm:1.9.2":
+  version: 1.9.2
+  resolution: "@supabase/postgrest-js@npm:1.9.2"
+  dependencies:
+    "@supabase/node-fetch": ^2.6.14
+  checksum: 9aefbdfc1c0d8a00b932b0939dbcbb5ec392b1324ad1b63b5e0486c6f9882a9c2292c80d3f803a0338938097372f08b3bcbdc3c4699d5bef13791ddc35d53b86
+  languageName: node
+  linkType: hard
+
+"@supabase/realtime-js@npm:2.9.3":
+  version: 2.9.3
+  resolution: "@supabase/realtime-js@npm:2.9.3"
+  dependencies:
+    "@supabase/node-fetch": ^2.6.14
+    "@types/phoenix": ^1.5.4
+    "@types/ws": ^8.5.10
+    ws: ^8.14.2
+  checksum: 180a5084b94a4e324fc04041182bf8819c3c2545a731c276a56f9647f78078180b0460b68a0d6c568d29b2fa4aace0545bb71dcb89b547ec85781032dff74e71
+  languageName: node
+  linkType: hard
+
+"@supabase/ssr@npm:^0.1.0":
+  version: 0.1.0
+  resolution: "@supabase/ssr@npm:0.1.0"
+  dependencies:
+    cookie: ^0.5.0
+    ramda: ^0.29.0
+  peerDependencies:
+    "@supabase/supabase-js": ^2.33.1
+  checksum: bde23c835c2e1b731fb5aa677ebc7137d9103314e8a48a58bb32d5b1b5bd6f3407adb7440593b46c4a89448b55b847ea2b099a94a595a61ca8599b22d78c1f51
+  languageName: node
+  linkType: hard
+
+"@supabase/storage-js@npm:2.5.5":
+  version: 2.5.5
+  resolution: "@supabase/storage-js@npm:2.5.5"
+  dependencies:
+    "@supabase/node-fetch": ^2.6.14
+  checksum: 4470499113c15e1124d99048eef0097c7ba431d728e351519ee26948775171d6c6bb41156f8ffb3860009b82b93809af01c9d075ece6000f783f59ce9fd00ee8
+  languageName: node
+  linkType: hard
+
+"@supabase/supabase-js@npm:^2.41.1":
+  version: 2.41.1
+  resolution: "@supabase/supabase-js@npm:2.41.1"
+  dependencies:
+    "@supabase/auth-js": 2.63.0
+    "@supabase/functions-js": 2.2.2
+    "@supabase/node-fetch": 2.6.15
+    "@supabase/postgrest-js": 1.9.2
+    "@supabase/realtime-js": 2.9.3
+    "@supabase/storage-js": 2.5.5
+  checksum: 8b4c36a1c7a79ccd311e08e39cf3fed929b855e9e11a5e939c21829db8c183e219815228135e3553f621547af394641aa3f031186aae79be34f02fcc2b072f01
   languageName: node
   linkType: hard
 
@@ -2586,6 +2671,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@types/phoenix@npm:^1.5.4":
+  version: 1.6.4
+  resolution: "@types/phoenix@npm:1.6.4"
+  checksum: 0f13849602db6d9a2a4b9d96386c45471acedf2bc3d6bf6b3289876fa73f0fe0e84c8466bd55c4f2763d33e142e5311c220820fed9ac2a21d9126f1f70a7338f
+  languageName: node
+  linkType: hard
+
 "@types/prettier@npm:^2, @types/prettier@npm:^2.1.1":
   version: 2.7.3
   resolution: "@types/prettier@npm:2.7.3"
@@ -2682,6 +2774,15 @@ __metadata:
   dependencies:
     "@types/node": "*"
   checksum: b4c9b8ad209620c9b21e78314ce4ff07515c0cadab9af101c1651e7bfb992d7fd933bd8b9c99d110738fd6db523ed15f82f29f50b45510288da72e964dedb1a3
+  languageName: node
+  linkType: hard
+
+"@types/ws@npm:^8.5.10":
+  version: 8.5.10
+  resolution: "@types/ws@npm:8.5.10"
+  dependencies:
+    "@types/node": "*"
+  checksum: 3ec416ea2be24042ebd677932a462cf16d2080393d8d7d0b1b3f5d6eaa4a7387aaf0eefb99193c0bfd29444857cf2e0c3ac89899e130550dc6c14ada8a46d25e
   languageName: node
   linkType: hard
 
@@ -5312,6 +5413,13 @@ __metadata:
   version: 0.4.2
   resolution: "cookie@npm:0.4.2"
   checksum: a00833c998bedf8e787b4c342defe5fa419abd96b32f4464f718b91022586b8f1bafbddd499288e75c037642493c83083da426c6a9080d309e3bd90fd11baa9b
+  languageName: node
+  linkType: hard
+
+"cookie@npm:^0.5.0":
+  version: 0.5.0
+  resolution: "cookie@npm:0.5.0"
+  checksum: 1f4bd2ca5765f8c9689a7e8954183f5332139eb72b6ff783d8947032ec1fdf43109852c178e21a953a30c0dd42257828185be01b49d1eb1a67fd054ca588a180
   languageName: node
   linkType: hard
 
@@ -11554,6 +11662,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"ramda@npm:^0.29.0":
+  version: 0.29.1
+  resolution: "ramda@npm:0.29.1"
+  checksum: df7c627597a66d5f317f6ba77ad17d7ba818efc9c2c4a638440bc23f2c651e823970ea05b05a28895738c0e4b738fadbdc17b2c97b3ad922826febc09c859c44
+  languageName: node
+  linkType: hard
+
 "randombytes@npm:^2.1.0":
   version: 2.1.0
   resolution: "randombytes@npm:2.1.0"
@@ -14514,6 +14629,21 @@ __metadata:
     utf-8-validate:
       optional: true
   checksum: c3c100a181b731f40b7f2fddf004aa023f79d64f489706a28bc23ff88e87f6a64b3c6651fbec3a84a53960b75159574d7a7385709847a62ddb7ad6af76f49138
+  languageName: node
+  linkType: hard
+
+"ws@npm:^8.14.2":
+  version: 8.16.0
+  resolution: "ws@npm:8.16.0"
+  peerDependencies:
+    bufferutil: ^4.0.1
+    utf-8-validate: ">=5.0.2"
+  peerDependenciesMeta:
+    bufferutil:
+      optional: true
+    utf-8-validate:
+      optional: true
+  checksum: feb3eecd2bae82fa8a8beef800290ce437d8b8063bdc69712725f21aef77c49cb2ff45c6e5e7fce622248f9c7abaee506bae0a9064067ffd6935460c7357321b
   languageName: node
   linkType: hard
 

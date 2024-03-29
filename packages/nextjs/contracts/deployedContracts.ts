@@ -80,6 +80,56 @@ const deployedContracts = {
           inputs: [
             {
               indexed: true,
+              internalType: "uint256",
+              name: "tokenId",
+              type: "uint256",
+            },
+            {
+              indexed: true,
+              internalType: "address",
+              name: "user",
+              type: "address",
+            },
+            {
+              indexed: true,
+              internalType: "address",
+              name: "creatorAddress",
+              type: "address",
+            },
+            {
+              indexed: false,
+              internalType: "uint64",
+              name: "expires",
+              type: "uint64",
+            },
+          ],
+          name: "NewSub",
+          type: "event",
+        },
+        {
+          anonymous: false,
+          inputs: [
+            {
+              indexed: true,
+              internalType: "address",
+              name: "creatorAddress",
+              type: "address",
+            },
+            {
+              indexed: false,
+              internalType: "uint256",
+              name: "subRate",
+              type: "uint256",
+            },
+          ],
+          name: "SubscriptionUpdate",
+          type: "event",
+        },
+        {
+          anonymous: false,
+          inputs: [
+            {
+              indexed: true,
               internalType: "address",
               name: "from",
               type: "address",
@@ -129,6 +179,24 @@ const deployedContracts = {
           inputs: [
             {
               internalType: "address",
+              name: "creatorAddress",
+              type: "address",
+            },
+            {
+              internalType: "uint256",
+              name: "monthlyRate",
+              type: "uint256",
+            },
+          ],
+          name: "addCreator",
+          outputs: [],
+          stateMutability: "nonpayable",
+          type: "function",
+        },
+        {
+          inputs: [
+            {
+              internalType: "address",
               name: "to",
               type: "address",
             },
@@ -160,6 +228,24 @@ const deployedContracts = {
             },
           ],
           stateMutability: "view",
+          type: "function",
+        },
+        {
+          inputs: [
+            {
+              internalType: "uint256",
+              name: "tokenId",
+              type: "uint256",
+            },
+            {
+              internalType: "address",
+              name: "user",
+              type: "address",
+            },
+          ],
+          name: "bumpSubscription",
+          outputs: [],
+          stateMutability: "payable",
           type: "function",
         },
         {
@@ -208,19 +294,19 @@ const deployedContracts = {
         {
           inputs: [
             {
-              internalType: "uint256",
-              name: "tokenId",
-              type: "uint256",
+              internalType: "address",
+              name: "to",
+              type: "address",
             },
             {
               internalType: "address",
-              name: "to",
+              name: "creatorAddress",
               type: "address",
             },
           ],
           name: "mint",
           outputs: [],
-          stateMutability: "nonpayable",
+          stateMutability: "payable",
           type: "function",
         },
         {
