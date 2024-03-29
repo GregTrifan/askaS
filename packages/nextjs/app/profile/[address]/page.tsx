@@ -2,12 +2,21 @@
 
 import React from "react";
 import { useParams } from "next/navigation";
+import { useAccount } from "wagmi";
 import { BlockieAvatar } from "~~/components/scaffold-eth";
+import { BecomeCreator } from "~~/components/user/becomeCreator";
+import { useScaffoldContractRead } from "~~/hooks/scaffold-eth";
 import { useCurrentUser } from "~~/hooks/user/useCurrentUser";
 
 function ProfilePage() {
-    const { isLoading, user } = useCurrentUser();
+    const { isLoading, user, userAddress } = useCurrentUser();
+    const account = useAccount();
     const params = useParams<{ address: string }>();
+    const { data: isCreator } = useScaffoldContractRead({
+        contractName: "YourContract",
+        functionName: "isCreator",
+        args: [userAddress],
+    });
 
     if (isLoading)
         return (
@@ -29,7 +38,18 @@ function ProfilePage() {
                     Edit Profile
                 </a>
 
-                <button className="btn btn-info mx-auto mt-24 px-4 rounded-lg uppercase">Become a creator</button>
+                {!isCreator && <BecomeCreator />}
+
+                {isCreator && (
+                    <div className="flex flex-col gap-4 justify-center mx-5">
+                        <h4 className="text-left text-2xl">{userAddress === account.address ? "Your " : "Creator's "}content</h4>
+                        {userAddress == account.address && <button className="btn btn-info mr-auto px-4 btn-sm">Add a post</button>}
+                        <div className="card card-bordered max-w-lg bg-black/50 border-primary/30">
+                            <p>Creator Content</p>
+                            <div></div>
+                        </div>
+                    </div>
+                )}
             </div>
         );
     return (

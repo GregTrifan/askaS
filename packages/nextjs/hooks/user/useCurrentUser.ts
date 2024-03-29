@@ -27,5 +27,5 @@ export const useCurrentUser = () => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [account.address]);
 
-  return { user, isLoading };
+  return { user, isLoading, userAddress: params.address ?? account.address };
 };

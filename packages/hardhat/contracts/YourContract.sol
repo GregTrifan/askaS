@@ -66,6 +66,10 @@ contract YourContract is ERC4907 {
 		emit SubscriptionUpdate(creatorAddress, monthlyRate);
 	}
 
+	function isCreator(address userAddress) public view returns (bool) {
+		return userAddress == _subRate[userAddress].creatorAddress;
+	}
+
 	// bump subscription another 30 days
 	function bumpSubscription(uint256 tokenId, address user) public payable {
 		address creatorAddress = _subInfo[tokenId].creatorAddress;

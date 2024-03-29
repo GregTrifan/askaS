@@ -13,7 +13,7 @@ const Home: NextPage = () => {
                     </h1>
                 </div>
 
-                <a className="my-auto btn btn-secondary" href="/creators/signup">
+                <a className="my-auto btn btn-secondary" href="/profile/signup">
                     Get Started
                 </a>
             </div>
