@@ -10,7 +10,6 @@ Base Sepolia: 0xCBc9e130e59E8517367dbFeB31Ff3000a736761e
 
 ### This project applies to the following ethBucharest tracks:
 
-- Open track
 - Base (consumer product)
 - Arbitrum DAO (Open track/Moonshot idea/ Decentralized Social)
 - ENS
