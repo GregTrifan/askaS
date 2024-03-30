@@ -14,12 +14,13 @@ export const usePostsGet = () => {
       try {
         const { data: fetchedPosts } = await supabase.from("posts").select("*").eq("userAddress", params.address);
         console.log(fetchedPosts);
-        setPosts(fetchedPosts as CreatorPost[]);
+        setPosts(fetchedPosts?.reverse() as CreatorPost[]);
       } catch {
         setPosts([]);
       }
       setIsLoading(false);
     })();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return { isLoading, posts };

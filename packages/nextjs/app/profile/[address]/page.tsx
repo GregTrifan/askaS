@@ -5,6 +5,7 @@ import { useParams } from "next/navigation";
 import { useAccount } from "wagmi";
 import { CreatorPosts } from "~~/components/creator/CreatorPosts";
 import { AddPost } from "~~/components/creator/addPost";
+import { SubscriptionContent } from "~~/components/creator/subscriptionContent";
 import { BlockieAvatar } from "~~/components/scaffold-eth";
 import { BecomeCreator } from "~~/components/user/becomeCreator";
 import { useScaffoldContractRead } from "~~/hooks/scaffold-eth";
@@ -48,7 +49,7 @@ function ProfilePage() {
                     </div>
                 )}
 
-                {isCreator && (
+                {isCreator && account.address === userAddress && (
                     <div className="flex flex-col gap-4 mx-5 text-left">
                         <div className="flex flex-col gap-4 max-w-lg text-left mx-auto w-full mb-4">
                             <h4 className="text-left text-2xl">{userAddress === account.address ? "Your " : "Creator's "}content</h4>
@@ -57,6 +58,7 @@ function ProfilePage() {
                         <CreatorPosts />
                     </div>
                 )}
+                {isCreator && account.address !== userAddress && <SubscriptionContent />}
             </div>
         );
     return (

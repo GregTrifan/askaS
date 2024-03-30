@@ -70,6 +70,16 @@ contract YourContract is ERC4907 {
 		return userAddress == _subRate[userAddress].creatorAddress;
 	}
 
+	function getCurrentTokenId() public view returns (uint256) {
+		return _tokenIds.current();
+	}
+
+	function creatorMonthlyRate(
+		address userAddress
+	) public view returns (uint256) {
+		return _subRate[userAddress].subRate;
+	}
+
 	// bump subscription another 30 days
 	function bumpSubscription(uint256 tokenId, address user) public payable {
 		address creatorAddress = _subInfo[tokenId].creatorAddress;

@@ -59,7 +59,7 @@ const config: HardhatUserConfig = {
       accounts: [deployerPrivateKey],
     },
     arbitrumSepolia: {
-      url: `https://arb-sepolia.g.alchemy.com/v2/${providerApiKey}`,
+      url: `https://public.stackup.sh/api/v1/node/arbitrum-sepolia`,
       accounts: [deployerPrivateKey],
     },
     optimism: {

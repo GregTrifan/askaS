@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { useParams } from "next/navigation";
 import { useAccount } from "wagmi";
+import { userStore } from "~~/store/userStore";
 import { UserInfo } from "~~/types/ProfileTypes";
 import { createSupClient } from "~~/utils/supabase";
 
@@ -10,6 +11,7 @@ export const useCurrentUser = () => {
   const [user, setUser] = useState<UserInfo>();
   const supabase = createSupClient();
   const [isLoading, setIsLoading] = useState(true);
+  const { setPreviewUser } = userStore();
   useEffect(() => {
     setIsLoading(true);
     (async () => {
@@ -19,6 +21,7 @@ export const useCurrentUser = () => {
           .select()
           .eq("userAddress", params.address ?? account.address);
         setUser(users![0]);
+        setPreviewUser(users![0]);
       } catch {
         setUser({ bio: "", fullName: "", username: "" });
       }
