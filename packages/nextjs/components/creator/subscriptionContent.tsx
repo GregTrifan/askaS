@@ -40,7 +40,7 @@ export const SubscriptionContent = () => {
             <div className="max-w-md mx-auto">
                 <button className="btn btn-secondary" disabled={isSusbscribeLoading} onClick={handleSubscribe}>
                     {isSusbscribeLoading && <span className="loading loading-spinner"></span>}
-                    Subscribe to creator - {Number(creatorMonthlyRate) / 10 ** 18} ETH
+                    Subscribe to creator - {Number(creatorMonthlyRate) / 10 ** 18} ETH/month
                 </button>
             </div>
         </div>
